@@ -1,0 +1,36 @@
+{
+  "server": {
+    "port": 8080,
+    "host": "0.0.0.0"
+  },
+  "database": {
+    "host": "db",
+    "port": 5432,
+    "user": "postgres",
+    "password": "postgres",
+    "name": "vpn_service"
+  },
+  "jwt": {
+    "secret": "your-secret-key-replace-in-production",
+    "expiration": 24
+  },
+  "wireguard": {
+    "configDir": "/config",
+    "dynamicPeerDir": "/config/dynamic-peers",
+    "interface": "wg0",
+    "listenPort": 51820,
+    "serverEndpoint": "auto:51820",
+    "serverIP": "10.0.0.1/24",
+    "allowedIPs": "0.0.0.0/0,::/0",
+    "dns": "1.1.1.1,8.8.8.8",
+    "persistentKeepalive": 25
+  },
+  "monitoring": {
+    "logDir": "logs",
+    "enablePrometheus": true,
+    "metricsPort": 8080,
+    "enableAnalytics": true,
+    "analyticsLogFile": "logs/usage_analytics.log"
+  },
+  "apiAddr": ":8080"
+}

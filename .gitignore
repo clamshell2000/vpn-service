@@ -1,0 +1,48 @@
+# Environment variables
+.env
+*.env
+.env.*
+
+# Keys and certificates
+*.key
+*.pem
+*.crt
+private/
+secrets/
+infrastructure/nginx/ssl/
+
+# WireGuard specific
+wg-private-key
+wg-preshared-key
+*.conf
+backend/data/wg_configs/peer*/
+
+# Logs
+*.log
+logs/
+backend/logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+postgres-data/
+
+# Build artifacts
+bin/
+dist/
+build/
+
+# Docker volumes
+volumes/
+data/
+
+# IDE specific
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS specific
+.DS_Store
+Thumbs.db
